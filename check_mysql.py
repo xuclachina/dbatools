@@ -29,7 +29,7 @@ class DBUtil:
     def check_table_size(self):
         try:
             sql = "select table_schema,table_name,concat(round((data_length+index_length)/1024/1024,2),'M') FROM \
-information_schema.tables where (DATA_LENGTH+INDEX_LENGTH) > 10*1024*1024*1024  and table_schema not in \
+            information_schema.tables where (DATA_LENGTH+INDEX_LENGTH) > 10*1024*1024*1024  and table_schema not in \
 ('information_schema','mysql','performance_schema','sys')"
             self._cursor.execute(sql)
             result = self._cursor.fetchall()
@@ -130,7 +130,7 @@ where DATA_TYPE='varchar' and CHARACTER_MAXIMUM_LENGTH > 500 and table_schema no
                 print("结果不存在")
             for row in result:
                 print(("schema: %s tablename: %s column_name: %s data_type: %s(%s)") % (
-                row[0], row[1], row[2], row[3], row[4]))
+                    row[0], row[1], row[2], row[3], row[4]))
         except Exception as e:
             raise (e)
 
@@ -161,7 +161,7 @@ kt.table_schema=t.table_schema AND kt.table_name = t.table_name WHERE t.table_sc
                 print("结果不存在")
             for row in result:
                 print(("schema: %s tablename: %s redundant_index_name：%s redundant_index_columns:%s ") % (
-                row[0], row[1], row[2], row[3]))
+                    row[0], row[1], row[2], row[3]))
         except Exception as e:
             raise (e)
 
@@ -261,7 +261,7 @@ s.table_name=t.table_name and s.index_name=t.index_name;"
             result = self._cursor.fetchall()
             user_list = []
             for row in result:
-                user_list.append("'"+row[0]+"'"+"@"+"'"+row[1]+"'")
+                user_list.append("'" + row[0] + "'" + "@" + "'" + row[1] + "'")
             print('检查用户权限')
             for user in user_list:
                 sql = "show grants for %s;" % user
@@ -272,6 +272,8 @@ s.table_name=t.table_name and s.index_name=t.index_name;"
                     print(row[0])
         except Exception as e:
             raise (e)
+
+
 if __name__ == '__main__':
     with DBUtil('username', 'userpassword', 'mysqlip', port, 'information_schema') as client:
         client.check_table_size()
@@ -290,7 +292,3 @@ if __name__ == '__main__':
         client.check_user_nopass()
         client.check_user_nowhere()
         client.check_user_privileges()
-
-
-
-
