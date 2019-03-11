@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-#
+	# auth:xucl
 
 import sys
 import time
