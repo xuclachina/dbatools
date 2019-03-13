@@ -196,6 +196,7 @@ s.table_name=t.table_name and s.index_name=t.index_name;"
             raise (e)
 
     def check_important_variables(self):
+        print('检查重要参数')
         variables_list = ['version', 'innodb_buffer_pool_size', 'innodb_flush_log_at_trx_commit',
                           'innodb_log_file_size', 'innodb_log_files_in_group', 'innodb_file_per_table',
                           'innodb_max_dirty_pages_pct', 'sync_binlog', 'max_connections', 'query_cache_type',
@@ -211,11 +212,11 @@ s.table_name=t.table_name and s.index_name=t.index_name;"
                 raise (e)
 
     def check_important_status(self):
+        print('检查重要状态')
         status_list = ['Uptime', 'Opened_files', 'Opened_table_definitions', 'Opened_tables', 'Max_used_connections',
                        'Threads_created', 'Threads_connected', 'Aborted_connects', 'Aborted_clients',
                        'Table_locks_waited', 'Innodb_buffer_pool_wait_free', 'Innodb_log_waits',
                        'Table_locks_waited', 'Innodb_row_lock_waits', 'Innodb_row_lock_time_avg']
-
         for status in status_list:
             try:
                 sql = ("show global status like '%s'" % status)
@@ -224,10 +225,23 @@ s.table_name=t.table_name and s.index_name=t.index_name;"
                 print(('%s : %s') % (status, result))
             except Exception as e:
                 raise (e)
-        # self._cursor.execute("show engine innodb status\G")
-        # innodb_status = self._cursor.fetchall()
-        # print(type(innodb_status))
-        # print(innodb_status)
+        self._cursor.execute("show engine innodb status")
+        innodb_status = self._cursor.fetchall()
+        innodb_status_format = str(innodb_status).split('\\n')
+        for item in innodb_status_format:
+            if "Log sequence number" in item:
+                logsequencenumber = item.split(' ')[3]
+                print(('%s : %s') % ('Log sequence number', logsequencenumber))
+            if "Log flushed up to" in item:
+                logflushnumber = item.split(' ')[6]
+                print(('%s : %s') % ('Log flushed up to', logflushnumber))
+            if "Last checkpoint at" in item:
+                checkpoint = item.split(' ')[4]
+                print(('%s : %s') % ('Last checkpoint at', checkpoint))
+            if "History list length" in item:
+                historylength = item.split(' ')[3]
+                print(('%s : %s') % ('historylength', historylength))
+
 
     def check_user_nopass(self):
         try:
@@ -276,7 +290,7 @@ s.table_name=t.table_name and s.index_name=t.index_name;"
 
 
 if __name__ == '__main__':
-    with DBUtil('username', 'userpassword', 'mysqlip', port, 'information_schema') as client:
+    with DBUtil('user', 'password', 'hostip', 3306, 'information_schema') as client:
         client.check_table_size()
         client.check_table_index()
         client.check_table_fragment_pct()
