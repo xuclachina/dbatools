@@ -1,0 +1,114 @@
+#my.cnf
+[client]
+port            = 3306
+socket          = /tmp/mysql.sock
+
+[mysql]
+prompt="\\u@\\h:\\p  [\\d]> 
+#pager="less -i -n -S"
+#tee=/home/mysql/query.log
+no-auto-rehash
+
+[mysqld]
+#misc
+user = mysql
+basedir = /usr/local/mysql
+datadir = /data/mysql/mysql3306/data
+port = 3306
+socket = /tmp/mysql.sock
+event_scheduler = 0
+
+#timeout
+interactive_timeout = 300
+wait_timeout = 300
+
+#character set
+character-set-server = utf8
+
+open_files_limit = 65535
+max_connections = 100
+max_connect_errors = 100000
+
+#logs
+log-output=file
+slow_query_log = 1
+slow_query_log_file = slow.log
+log-error = error.log
+log_warnings = 2
+pid-file = mysql.pid
+long_query_time = 1
+#log-slow-admin-statements = 1
+#log-queries-not-using-indexes = 1
+log-slow-slave-statements = 1
+
+#binlog
+binlog_format = row
+server-id = 10518
+log-bin = mysql-bin
+binlog_cache_size = 1M
+max_binlog_size = 200M
+max_binlog_cache_size = 2G
+sync_binlog = 0
+expire_logs_days = 10
+
+#relay log
+skip_slave_start = 1
+max_relay_log_size = 500M
+relay_log_purge = 1
+relay_log_recovery = 1
+log_slave_updates
+#slave-skip-errors=1032,1053,1062
+
+#buffers & cache
+table_open_cache = 2048
+table_definition_cache = 2048
+table_open_cache = 2048
+max_heap_table_size = 96M
+sort_buffer_size = 2M
+join_buffer_size = 2M
+thread_cache_size = 256
+query_cache_size = 0
+query_cache_type = 0
+query_cache_limit = 256K
+query_cache_min_res_unit = 512
+thread_stack = 192K
+tmp_table_size = 96M
+key_buffer_size = 8M
+read_buffer_size = 2M
+read_rnd_buffer_size = 16M
+bulk_insert_buffer_size = 32M
+
+#myisam
+myisam_sort_buffer_size = 128M
+myisam_max_sort_file_size = 10G
+myisam_repair_threads = 1
+
+#innodb
+innodb_buffer_pool_size = 100M
+innodb_buffer_pool_instances = 1
+innodb_data_file_path = ibdata1:100M:autoextend
+innodb_flush_log_at_trx_commit = 2
+innodb_log_buffer_size = 64M
+innodb_log_file_size = 256M
+innodb_log_files_in_group = 3
+innodb_max_dirty_pages_pct = 90
+innodb_file_per_table = 1
+innodb_rollback_on_timeout
+innodb_status_file = 1
+innodb_io_capacity = 2000
+transaction_isolation = READ-COMMITTED
+innodb_flush_method = O_DIRECT
+
+#pxc
+default_storage_engine=Innodb
+innodb_locks_unsafe_for_binlog=1
+innodb_autoinc_lock_mode=2
+
+wsrep_cluster_name=pxc_wubx 
+wsrep_cluster_address=gcomm://10.37.129.5,10.37.129.6,10.37.129.10
+wsrep_node_address=10.37.129.10
+wsrep_provider=/usr/local/mysql/lib/libgalera_smm.so
+
+wsrep_sst_method=xtrabackup
+wsrep_sst_auth=sst:wubxwubx
+

@@ -1,0 +1,69 @@
+vrrp_script vs_mysql_81 {
+    script "/etc/keepalived/checkMySQL.py -h 192.168.11.81 -P 3306"
+    interval 120
+}
+vrrp_instance VI_81 {
+    state BACKUP
+    interface eth0
+    virtual_router_id 82
+    priority 90
+    advert_int 5
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    track_script {
+       vs_mysql_81
+    }
+    virtual_ipaddress {
+        192.168.11.100
+    }
+}
+
+vrrp_instance VI_101 {
+    state BACKUP
+    interface eth0
+    virtual_router_id 101
+    priority 90
+    advert_int 5
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        192.168.11.101
+    }
+}
+
+virtual_server 192.168.11.101 3306 { 
+    delay_loop 2 
+    lb_algo wrr 
+    lb_kind DR 
+    persistence_timeout 60 
+    protocol TCP 
+ 
+    real_server 192.168.11.83 3306 {
+        weight 3 
+         MISC_CHECK {
+           misc_path "/etc/keepalived/checkSlave.py -h 192.168.11.83 -P 3306"
+           misc_timeout 15
+           misc_dynamic
+        } 
+    }
+    real_server 192.168.11.81 3306 {
+        weight  1
+         MISC_CHECK {
+           misc_path "/etc/keepalived/checkSlave.py -h 192.168.11.81 -P 3306"
+           misc_timeout 15
+           misc_dynamic
+        } 
+    }
+    real_server 192.168.11.82 3306 {
+        weight  1
+         MISC_CHECK {
+           misc_path "/etc/keepalived/checkSlave.py -h 192.168.11.82 -P 3306"
+           misc_timeout 15
+           misc_dynamic
+        } 
+    }
+ } 

@@ -1,0 +1,539 @@
+141113 18:09:23 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141113 18:09:23 [Note] WSREP: wsrep_load(): loading provider library 'none'
+141113 18:09:23 [Note] WSREP: Service disconnected.
+141113 18:09:24 [Note] WSREP: Some threads may fail to exit.
+Error in my_thread_global_end(): 1 threads didn't exit
+141113 18:09:29 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141113 18:09:29 [Note] WSREP: wsrep_load(): loading provider library 'none'
+141113 18:09:29 [Note] WSREP: Service disconnected.
+141113 18:09:30 [Note] WSREP: Some threads may fail to exit.
+Error in my_thread_global_end(): 1 threads didn't exit
+141113 18:11:09 mysqld_safe Starting mysqld daemon with databases from /data/mysql/mysql3306/data
+141113 18:11:09 mysqld_safe Skipping wsrep-recover for empty datadir: /data/mysql/mysql3306/data
+141113 18:11:09 mysqld_safe Assigning 00000000-0000-0000-0000-000000000000:-1 to wsrep_start_position
+141113 18:11:09 [Note] WSREP: wsrep_start_position var submitted: '00000000-0000-0000-0000-000000000000:-1'
+141113 18:11:09 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141113 18:11:09 [Note] WSREP: wsrep_load(): loading provider library '/usr/local/mysql/lib/libgalera_smm.so'
+141113 18:11:09 [Note] WSREP: wsrep_load(): Galera 2.11(r318911d) by Codership Oy <info@codership.com> loaded successfully.
+141113 18:11:09 [Warning] WSREP: Could not open saved state file for reading: /data/mysql/mysql3306/data//grastate.dat
+141113 18:11:09 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1
+141113 18:11:09 [Note] WSREP: Preallocating 134219048/134219048 bytes in '/data/mysql/mysql3306/data//galera.cache'...
+141113 18:11:09 [Note] WSREP: Passing config to GCS: base_host = 10.37.129.10; base_port = 4567; cert.log_conflicts = no; debug = no; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /data/mysql/mysql3306/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /data/mysql/mysql3306/data//galera.cache; gcache.page_size = 128M; gcache.size = 128M; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.version = 0; pc.announce_timeout = PT3S; pc.checksum = false; pc.ignore_quorum = false; pc.ignore_sb = false; pc.npvo = false; pc.version = 0; pc.wait_prim = true; pc.wait_prim_timeout = P30S; pc.weight = 1; pro
+141113 18:11:09 [Note] WSREP: Assign initial position for certification: -1, protocol version: -1
+141113 18:11:09 [Note] WSREP: wsrep_sst_grab()
+141113 18:11:09 [Note] WSREP: Start replication
+141113 18:11:09 [Note] WSREP: Setting initial position to 00000000-0000-0000-0000-000000000000:-1
+141113 18:11:09 [Note] WSREP: protonet asio version 0
+141113 18:11:09 [Note] WSREP: backend: asio
+141113 18:11:09 [Note] WSREP: GMCast version 0
+141113 18:11:09 [Note] WSREP: (634cac1d, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+141113 18:11:09 [Note] WSREP: (634cac1d, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+141113 18:11:09 [Note] WSREP: EVS version 0
+141113 18:11:09 [Note] WSREP: PC version 0
+141113 18:11:09 [Note] WSREP: gcomm: bootstrapping new group 'pxc_wubx'
+141113 18:11:09 [Note] WSREP: Node 634cac1d state prim
+141113 18:11:09 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.5:4567
+141113 18:11:09 [Note] WSREP: discarding pending addr proto entry 0x2230ec0
+141113 18:11:09 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.6:4567
+141113 18:11:09 [Note] WSREP: discarding pending addr proto entry 0x2239630
+141113 18:11:09 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.83:4567
+141113 18:11:09 [Note] WSREP: discarding pending addr proto entry 0x2241d60
+141113 18:11:09 [Note] WSREP: gcomm: connected
+141113 18:11:09 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+141113 18:11:09 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+141113 18:11:09 [Note] WSREP: Opened channel 'pxc_wubx'
+141113 18:11:09 [Note] WSREP: Waiting for SST to complete.
+141113 18:11:09 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 1
+141113 18:11:09 [Note] WSREP: Starting new group from scratch: 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:11:09 [Note] WSREP: STATE_EXCHANGE: sent state UUID: 634d8cd4-6b1d-11e4-bbf3-1b854adf7db5
+141113 18:11:09 [Note] WSREP: STATE EXCHANGE: sent state msg: 634d8cd4-6b1d-11e4-bbf3-1b854adf7db5
+141113 18:11:09 [Note] WSREP: STATE EXCHANGE: got state msg: 634d8cd4-6b1d-11e4-bbf3-1b854adf7db5 from 0 (node10)
+141113 18:11:09 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 0,
+	members    = 1/1 (joined/total),
+	act_id     = 0,
+	last_appl. = -1,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:11:09 [Note] WSREP: Flow-control interval: [16, 16]
+141113 18:11:09 [Note] WSREP: Restored state OPEN -> JOINED (0)
+141113 18:11:09 [Note] WSREP: Member 0 (node10) synced with group.
+141113 18:11:09 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 0)
+141113 18:11:09 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:0, view# 1: Primary, number of nodes: 1, my index: 0, protocol version 3
+141113 18:11:09 [Note] WSREP: SST complete, seqno: 0
+141113 18:11:09 [Note] Plugin 'FEDERATED' is disabled.
+141113 18:11:09 InnoDB: The InnoDB memory heap is disabled
+141113 18:11:09 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+141113 18:11:09 InnoDB: Compressed tables use zlib 1.2.3
+141113 18:11:09 InnoDB: Using Linux native AIO
+141113 18:11:09 InnoDB: Initializing buffer pool, size = 100.0M
+141113 18:11:09 InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file ./ibdata1 did not exist:
+InnoDB: a new database to be created!
+141113 18:11:09  InnoDB: Setting file ./ibdata1 size to 100 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Progress in MB: 100
+141113 18:11:09  InnoDB: Log file ./ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile0 size to 256 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Progress in MB: 100 200
+141113 18:11:09  InnoDB: Log file ./ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile1 size to 256 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Progress in MB: 100 200
+141113 18:11:10  InnoDB: Log file ./ib_logfile2 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile2 size to 256 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Progress in MB: 100 200
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: 127 rollback segment(s) active.
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+141113 18:11:10  InnoDB: Waiting for the background threads to start
+141113 18:11:11 Percona XtraDB (http://www.percona.com) 5.5.39-36.0 started; log sequence number 0
+141113 18:11:11 [Note] Event Scheduler: Loaded 0 events
+141113 18:11:11 [Note] /usr/local/mysql/bin/mysqld: ready for connections.
+Version: '5.5.39-36.0-25.11-log'  socket: '/tmp/mysql.sock'  port: 3306  Percona XtraDB Cluster binary (GPL) 5.5.39-25.11, Revision 828, wsrep_25.11.r4023
+141113 18:11:11 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:11:11 [Note] WSREP: Assign initial position for certification: 0, protocol version: 2
+141113 18:11:11 [Note] WSREP: Synchronized with group, ready for connections
+141113 18:11:11 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:12:34 [Note] /usr/local/mysql/bin/mysqld: Normal shutdown
+
+141113 18:12:34 [Note] WSREP: Stop replication
+141113 18:12:34 [Note] WSREP: Closing send monitor...
+141113 18:12:34 [Note] WSREP: Closed send monitor.
+141113 18:12:34 [Note] WSREP: gcomm: terminating thread
+141113 18:12:34 [Note] WSREP: gcomm: joining thread
+141113 18:12:34 [Note] WSREP: gcomm: closing backend
+141113 18:12:34 [Note] WSREP: Received self-leave message.
+141113 18:12:34 [Note] WSREP: gcomm: closed
+141113 18:12:34 [Note] WSREP: Flow-control interval: [0, 0]
+141113 18:12:34 [Note] WSREP: Received SELF-LEAVE. Closing connection.
+141113 18:12:34 [Note] WSREP: Shifting SYNCED -> CLOSED (TO: 0)
+141113 18:12:34 [Note] WSREP: RECV thread exiting 0: Success
+141113 18:12:34 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:0, view# -1: non-Primary, number of nodes: 0, my index: -1, protocol version 3
+141113 18:12:34 [Note] WSREP: recv_thread() joined.
+141113 18:12:34 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:12:34 [Note] WSREP: Closing replication queue.
+141113 18:12:34 [Note] WSREP: Closing slave action queue.
+141113 18:12:34 [Note] WSREP: applier thread exiting (code:0)
+141113 18:12:36 [Note] WSREP: rollbacker thread exiting
+141113 18:12:36 [Note] Event Scheduler: Purging the queue. 0 events
+141113 18:12:36 [Note] WSREP: dtor state: CLOSED
+141113 18:12:36 [Note] WSREP: apply mon: entered 0
+141113 18:12:36 [Note] WSREP: apply mon: entered 0
+141113 18:12:36 [Note] WSREP: mon: entered 3 oooe fraction 0 oool fraction 0
+141113 18:12:36 [Note] WSREP: cert index usage at exit 0
+141113 18:12:36 [Note] WSREP: cert trx map usage at exit 0
+141113 18:12:36 [Note] WSREP: deps set usage at exit 0
+141113 18:12:36 [Note] WSREP: avg deps dist 0
+141113 18:12:36 [Note] WSREP: wsdb trx map usage 0 conn query map usage 0
+141113 18:12:36 [Note] WSREP: Shifting CLOSED -> DESTROYED (TO: 0)
+141113 18:12:36 [Note] WSREP: Flushing memory map to disk...
+141113 18:12:36  InnoDB: Starting shutdown...
+141113 18:12:40  InnoDB: Shutdown completed; log sequence number 1598118
+141113 18:12:40 [Note] /usr/local/mysql/bin/mysqld: Shutdown complete
+
+141113 18:12:40 mysqld_safe mysqld from pid file /data/mysql/mysql3306/data/mysql.pid ended
+141113 18:13:14 mysqld_safe Starting mysqld daemon with databases from /data/mysql/mysql3306/data
+141113 18:13:14 mysqld_safe Skipping wsrep-recover for 634d7d4c-6b1d-11e4-b228-836187c0ec19:0 pair
+141113 18:13:14 mysqld_safe Assigning 634d7d4c-6b1d-11e4-b228-836187c0ec19:0 to wsrep_start_position
+141113 18:13:14 [Note] WSREP: wsrep_start_position var submitted: '634d7d4c-6b1d-11e4-b228-836187c0ec19:0'
+141113 18:13:14 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141113 18:13:14 [Note] WSREP: wsrep_load(): loading provider library '/usr/local/mysql/lib/libgalera_smm.so'
+141113 18:13:14 [Note] WSREP: wsrep_load(): Galera 2.11(r318911d) by Codership Oy <info@codership.com> loaded successfully.
+141113 18:13:14 [Note] WSREP: Found saved state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:0
+141113 18:13:14 [Note] WSREP: Reusing existing '/data/mysql/mysql3306/data//galera.cache'.
+141113 18:13:14 [Note] WSREP: Passing config to GCS: base_host = 10.37.129.10; base_port = 4567; cert.log_conflicts = no; debug = no; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /data/mysql/mysql3306/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /data/mysql/mysql3306/data//galera.cache; gcache.page_size = 128M; gcache.size = 128M; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.version = 0; pc.announce_timeout = PT3S; pc.checksum = false; pc.ignore_quorum = false; pc.ignore_sb = false; pc.npvo = false; pc.version = 0; pc.wait_prim = true; pc.wait_prim_timeout = P30S; pc.weight = 1; pro
+141113 18:13:14 [Note] WSREP: Assign initial position for certification: 0, protocol version: -1
+141113 18:13:14 [Note] WSREP: wsrep_sst_grab()
+141113 18:13:14 [Note] WSREP: Start replication
+141113 18:13:14 [Note] WSREP: Setting initial position to 634d7d4c-6b1d-11e4-b228-836187c0ec19:0
+141113 18:13:14 [Note] WSREP: protonet asio version 0
+141113 18:13:14 [Note] WSREP: backend: asio
+141113 18:13:14 [Note] WSREP: GMCast version 0
+141113 18:13:14 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+141113 18:13:14 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+141113 18:13:14 [Note] WSREP: EVS version 0
+141113 18:13:14 [Note] WSREP: PC version 0
+141113 18:13:14 [Note] WSREP: gcomm: bootstrapping new group 'pxc_wubx'
+141113 18:13:14 [Note] WSREP: Node ae303da5 state prim
+141113 18:13:14 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.10:4567
+141113 18:13:14 [Note] WSREP: discarding pending addr proto entry 0x19b9e10
+141113 18:13:14 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.5:4567
+141113 18:13:14 [Note] WSREP: discarding pending addr proto entry 0x19c2610
+141113 18:13:14 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.6:4567
+141113 18:13:14 [Note] WSREP: discarding pending addr proto entry 0x19cad80
+141113 18:13:14 [Note] WSREP: gcomm: connected
+141113 18:13:14 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+141113 18:13:14 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+141113 18:13:14 [Note] WSREP: Opened channel 'pxc_wubx'
+141113 18:13:14 [Note] WSREP: Waiting for SST to complete.
+141113 18:13:14 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 1
+141113 18:13:14 [Note] WSREP: STATE_EXCHANGE: sent state UUID: ae30ee30-6b1d-11e4-a09e-275aaab4764c
+141113 18:13:14 [Note] WSREP: STATE EXCHANGE: sent state msg: ae30ee30-6b1d-11e4-a09e-275aaab4764c
+141113 18:13:14 [Note] WSREP: STATE EXCHANGE: got state msg: ae30ee30-6b1d-11e4-a09e-275aaab4764c from 0 (node10)
+141113 18:13:14 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 0,
+	members    = 1/1 (joined/total),
+	act_id     = 0,
+	last_appl. = -1,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:13:14 [Note] WSREP: Flow-control interval: [16, 16]
+141113 18:13:14 [Note] WSREP: Restored state OPEN -> JOINED (0)
+141113 18:13:14 [Note] WSREP: Member 0 (node10) synced with group.
+141113 18:13:14 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 0)
+141113 18:13:14 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:0, view# 1: Primary, number of nodes: 1, my index: 0, protocol version 3
+141113 18:13:14 [Note] WSREP: SST complete, seqno: 0
+141113 18:13:14 [Note] Plugin 'FEDERATED' is disabled.
+141113 18:13:14 InnoDB: The InnoDB memory heap is disabled
+141113 18:13:14 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+141113 18:13:14 InnoDB: Compressed tables use zlib 1.2.3
+141113 18:13:14 InnoDB: Using Linux native AIO
+141113 18:13:14 InnoDB: Initializing buffer pool, size = 100.0M
+141113 18:13:14 InnoDB: Completed initialization of buffer pool
+141113 18:13:14 InnoDB: highest supported file format is Barracuda.
+141113 18:13:14  InnoDB: Waiting for the background threads to start
+141113 18:13:15 Percona XtraDB (http://www.percona.com) 5.5.39-36.0 started; log sequence number 1598118
+141113 18:13:15 [Note] Event Scheduler: Loaded 0 events
+141113 18:13:15 [Note] /usr/local/mysql/bin/mysqld: ready for connections.
+Version: '5.5.39-36.0-25.11-log'  socket: '/tmp/mysql.sock'  port: 3306  Percona XtraDB Cluster binary (GPL) 5.5.39-25.11, Revision 828, wsrep_25.11.r4023
+141113 18:13:15 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:13:15 [Note] WSREP: Assign initial position for certification: 0, protocol version: 2
+141113 18:13:15 [Note] WSREP: Synchronized with group, ready for connections
+141113 18:13:15 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:22:40 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 18:22:41 [Note] WSREP: declaring 2e9dff5b at tcp://10.37.129.6:4567 stable
+141113 18:22:41 [Note] WSREP: Node ae303da5 state prim
+141113 18:22:41 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+141113 18:22:41 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 18:22:41 [Note] WSREP: STATE EXCHANGE: sent state msg: 2f379038-66a8-11e4-bc51-3659272d1ada
+141113 18:22:41 [Note] WSREP: STATE EXCHANGE: got state msg: 2f379038-66a8-11e4-bc51-3659272d1ada from 0 (node6)
+141113 18:22:41 [Note] WSREP: STATE EXCHANGE: got state msg: 2f379038-66a8-11e4-bc51-3659272d1ada from 1 (node10)
+141113 18:22:41 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 1,
+	members    = 1/2 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:22:41 [Note] WSREP: Flow-control interval: [23, 23]
+141113 18:22:41 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 2: Primary, number of nodes: 2, my index: 1, protocol version 3
+141113 18:22:41 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:22:41 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 18:22:44 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 18:22:44 [Note] WSREP: forgetting 2e9dff5b (tcp://10.37.129.6:4567)
+141113 18:22:44 [Note] WSREP: Node ae303da5 state prim
+141113 18:22:44 [Note] WSREP: forgetting 2e9dff5b (tcp://10.37.129.6:4567)
+141113 18:22:44 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 1
+141113 18:22:44 [Note] WSREP: STATE_EXCHANGE: sent state UUID: 01e6043a-6b1f-11e4-98b9-be5c79f332af
+141113 18:22:44 [Note] WSREP: STATE EXCHANGE: sent state msg: 01e6043a-6b1f-11e4-98b9-be5c79f332af
+141113 18:22:44 [Note] WSREP: STATE EXCHANGE: got state msg: 01e6043a-6b1f-11e4-98b9-be5c79f332af from 0 (node10)
+141113 18:22:44 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 2,
+	members    = 1/1 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:22:44 [Note] WSREP: Flow-control interval: [16, 16]
+141113 18:22:44 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 3: Primary, number of nodes: 1, my index: 0, protocol version 3
+141113 18:22:44 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:22:44 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 18:22:50 [Note] WSREP:  cleaning up 2e9dff5b (tcp://10.37.129.6:4567)
+141113 18:42:56 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 18:42:56 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 18:42:56 [Note] WSREP: Node ae303da5 state prim
+141113 18:42:56 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+141113 18:42:56 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 18:42:56 [Note] WSREP: STATE EXCHANGE: sent state msg: 0357b799-66ab-11e4-bc51-0fa5918da442
+141113 18:42:56 [Note] WSREP: STATE EXCHANGE: got state msg: 0357b799-66ab-11e4-bc51-0fa5918da442 from 0 (node6)
+141113 18:42:56 [Note] WSREP: STATE EXCHANGE: got state msg: 0357b799-66ab-11e4-bc51-0fa5918da442 from 1 (node10)
+141113 18:42:56 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 3,
+	members    = 1/2 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:42:56 [Note] WSREP: Flow-control interval: [23, 23]
+141113 18:42:56 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 4: Primary, number of nodes: 2, my index: 1, protocol version 3
+141113 18:42:56 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:42:56 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 18:42:56 [Note] WSREP: Node 0 (node6) requested state transfer from '*any*'. Selected 1 (node10)(SYNCED) as donor.
+141113 18:42:56 [Note] WSREP: Shifting SYNCED -> DONOR/DESYNCED (TO: 4)
+141113 18:42:56 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:42:56 [Note] WSREP: Running: 'wsrep_sst_xtrabackup --role 'donor' --address '10.37.129.6:4444/xtrabackup_sst' --auth 'sst:wubxwubx' --socket '/tmp/mysql.sock' --datadir '/data/mysql/mysql3306/data/' --defaults-file '/etc/my.cnf' --gtid '634d7d4c-6b1d-11e4-b228-836187c0ec19:4''
+141113 18:42:56 [Note] WSREP: sst_donor_thread signaled with 0
+WSREP_SST: [INFO] Streaming with tar (20141113 18:42:56.773)
+WSREP_SST: [INFO] Using socat as streamer (20141113 18:42:56.774)
+WSREP_SST: [INFO] Streaming the backup to joiner at 10.37.129.6 4444 (20141113 18:42:56.778)
+WSREP_SST: [INFO] Evaluating innobackupex --defaults-file=/etc/my.cnf $INNOEXTRA --galera-info --stream=$sfmt ${TMPDIR} 2>${DATA}/innobackup.backup.log | socat -u stdio TCP:10.37.129.6:4444; RC=( ${PIPESTATUS[@]} ) (20141113 18:42:56.779)
+141113 18:42:59 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 18:43:03 [Note] WSREP: Provider paused at 634d7d4c-6b1d-11e4-b228-836187c0ec19:4 (11)
+141113 18:43:04 [Note] WSREP: resuming provider at 11
+141113 18:43:04 [Note] WSREP: Provider resumed.
+141113 18:43:04 [Note] WSREP: 1 (node10): State transfer to 0 (node6) complete.
+141113 18:43:04 [Note] WSREP: Shifting DONOR/DESYNCED -> JOINED (TO: 4)
+141113 18:43:04 [Note] WSREP: Member 1 (node10) synced with group.
+141113 18:43:04 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 4)
+141113 18:43:04 [Note] WSREP: Synchronized with group, ready for connections
+141113 18:43:04 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+WSREP_SST: [INFO] Total time on donor: 0 seconds (20141113 18:43:04.848)
+141113 18:43:09 [Note] WSREP: 0 (node6): State transfer from 1 (node10) complete.
+141113 18:43:09 [Note] WSREP: Member 0 (node6) synced with group.
+141113 18:55:21 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 18:55:22 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 18:55:22 [Note] WSREP: declaring 98d4e084 at tcp://10.37.129.5:4567 stable
+141113 18:55:22 [Note] WSREP: Node 030a5feb state prim
+141113 18:55:22 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+141113 18:55:22 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 18:55:22 [Note] WSREP: STATE EXCHANGE: sent state msg: bfbf214c-66ac-11e4-84fb-26973b0d1f46
+141113 18:55:22 [Note] WSREP: STATE EXCHANGE: got state msg: bfbf214c-66ac-11e4-84fb-26973b0d1f46 from 0 (node6)
+141113 18:55:22 [Note] WSREP: STATE EXCHANGE: got state msg: bfbf214c-66ac-11e4-84fb-26973b0d1f46 from 2 (node10)
+141113 18:55:22 [Note] WSREP: STATE EXCHANGE: got state msg: bfbf214c-66ac-11e4-84fb-26973b0d1f46 from 1 (node5)
+141113 18:55:22 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 4,
+	members    = 2/3 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:55:22 [Note] WSREP: Flow-control interval: [28, 28]
+141113 18:55:22 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 5: Primary, number of nodes: 3, my index: 2, protocol version 3
+141113 18:55:22 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:55:22 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 18:55:22 [Note] WSREP: Node 1 (node5) requested state transfer from '*any*'. Selected 0 (node6)(SYNCED) as donor.
+141113 18:55:25 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 18:55:27 [Warning] WSREP: 0 (node6): State transfer to 1 (node5) failed: -22 (Invalid argument)
+141113 18:55:27 [Note] WSREP: Member 0 (node6) synced with group.
+141113 18:55:27 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 18:55:27 [Note] WSREP: forgetting 98d4e084 (tcp://10.37.129.5:4567)
+141113 18:55:27 [Note] WSREP: Node 030a5feb state prim
+141113 18:55:27 [Note] WSREP: forgetting 98d4e084 (tcp://10.37.129.5:4567)
+141113 18:55:27 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+141113 18:55:27 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 18:55:27 [Note] WSREP: STATE EXCHANGE: sent state msg: c2eb6e19-66ac-11e4-9f1a-a2c64c307b47
+141113 18:55:27 [Note] WSREP: STATE EXCHANGE: got state msg: c2eb6e19-66ac-11e4-9f1a-a2c64c307b47 from 0 (node6)
+141113 18:55:27 [Note] WSREP: STATE EXCHANGE: got state msg: c2eb6e19-66ac-11e4-9f1a-a2c64c307b47 from 1 (node10)
+141113 18:55:27 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 5,
+	members    = 2/2 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 18:55:27 [Note] WSREP: Flow-control interval: [23, 23]
+141113 18:55:27 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 6: Primary, number of nodes: 2, my index: 1, protocol version 3
+141113 18:55:27 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 18:55:27 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 18:55:32 [Note] WSREP:  cleaning up 98d4e084 (tcp://10.37.129.5:4567)
+141113 19:37:03 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 19:37:03 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 19:37:03 [Note] WSREP: declaring 6be28b11 at tcp://10.37.129.5:4567 stable
+141113 19:37:03 [Note] WSREP: Node 030a5feb state prim
+141113 19:37:03 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+141113 19:37:03 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 19:37:03 [Note] WSREP: STATE EXCHANGE: sent state msg: 92cccc54-66b2-11e4-989e-df54fe1a3549
+141113 19:37:03 [Note] WSREP: STATE EXCHANGE: got state msg: 92cccc54-66b2-11e4-989e-df54fe1a3549 from 0 (node6)
+141113 19:37:03 [Note] WSREP: STATE EXCHANGE: got state msg: 92cccc54-66b2-11e4-989e-df54fe1a3549 from 2 (node10)
+141113 19:37:04 [Note] WSREP: STATE EXCHANGE: got state msg: 92cccc54-66b2-11e4-989e-df54fe1a3549 from 1 (node5)
+141113 19:37:04 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 6,
+	members    = 2/3 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 19:37:04 [Note] WSREP: Flow-control interval: [28, 28]
+141113 19:37:04 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 7: Primary, number of nodes: 3, my index: 2, protocol version 3
+141113 19:37:04 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 19:37:04 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 19:37:04 [Note] WSREP: Node 1 (node5) requested state transfer from '*any*'. Selected 0 (node6)(SYNCED) as donor.
+141113 19:37:06 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 19:37:06 [Note] WSREP: forgetting 6be28b11 (tcp://10.37.129.5:4567)
+141113 19:37:06 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 19:37:06 [Note] WSREP: Node 030a5feb state prim
+141113 19:37:06 [Note] WSREP: forgetting 6be28b11 (tcp://10.37.129.5:4567)
+141113 19:37:06 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+141113 19:37:06 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 19:37:06 [Note] WSREP: STATE EXCHANGE: sent state msg: 94565100-66b2-11e4-9ee4-c3cf90b94847
+141113 19:37:06 [Note] WSREP: STATE EXCHANGE: got state msg: 94565100-66b2-11e4-9ee4-c3cf90b94847 from 0 (node6)
+141113 19:37:06 [Note] WSREP: STATE EXCHANGE: got state msg: 94565100-66b2-11e4-9ee4-c3cf90b94847 from 1 (node10)
+141113 19:37:06 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 7,
+	members    = 2/2 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 19:37:06 [Note] WSREP: Flow-control interval: [23, 23]
+141113 19:37:06 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 8: Primary, number of nodes: 2, my index: 1, protocol version 3
+141113 19:37:06 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 19:37:06 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 19:37:07 [Warning] WSREP: Could not find peer: 6be28b11-6aec-11e4-9e1a-2a3a0fb346ca
+141113 19:37:07 [Note] WSREP: 0 (node6): State transfer to -1 (left the group) complete.
+141113 19:37:07 [Note] WSREP: Member 0 (node6) synced with group.
+141113 19:37:11 [Note] WSREP:  cleaning up 6be28b11 (tcp://10.37.129.5:4567)
+141113 19:40:08 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 19:40:09 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 19:40:09 [Note] WSREP: declaring da59213e at tcp://10.37.129.5:4567 stable
+141113 19:40:09 [Note] WSREP: Node 030a5feb state prim
+141113 19:40:09 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 3
+141113 19:40:09 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 19:40:09 [Note] WSREP: STATE EXCHANGE: sent state msg: 0143780b-66b3-11e4-a0dd-0a1d79c9c0b5
+141113 19:40:09 [Note] WSREP: STATE EXCHANGE: got state msg: 0143780b-66b3-11e4-a0dd-0a1d79c9c0b5 from 0 (node6)
+141113 19:40:09 [Note] WSREP: STATE EXCHANGE: got state msg: 0143780b-66b3-11e4-a0dd-0a1d79c9c0b5 from 1 (node10)
+141113 19:40:09 [Note] WSREP: STATE EXCHANGE: got state msg: 0143780b-66b3-11e4-a0dd-0a1d79c9c0b5 from 2 (node5)
+141113 19:40:09 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 8,
+	members    = 2/3 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 19:40:09 [Note] WSREP: Flow-control interval: [28, 28]
+141113 19:40:09 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 9: Primary, number of nodes: 3, my index: 1, protocol version 3
+141113 19:40:09 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 19:40:09 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 19:40:09 [Note] WSREP: Node 2 (node5) requested state transfer from '*any*'. Selected 0 (node6)(SYNCED) as donor.
+141113 19:40:11 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 19:40:13 [Note] WSREP: 0 (node6): State transfer to 2 (node5) complete.
+141113 19:40:13 [Note] WSREP: Member 0 (node6) synced with group.
+141113 19:40:18 [Note] WSREP: 2 (node5): State transfer from 0 (node6) complete.
+141113 19:40:18 [Note] WSREP: Member 2 (node5) synced with group.
+141113 19:43:49 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 19:43:49 [Note] WSREP: forgetting da59213e (tcp://10.37.129.5:4567)
+141113 19:43:49 [Note] WSREP: Node 030a5feb state prim
+141113 19:43:49 [Note] WSREP: forgetting da59213e (tcp://10.37.129.5:4567)
+141113 19:43:49 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+141113 19:43:49 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 19:43:49 [Note] WSREP: STATE EXCHANGE: sent state msg: 84b2b3fa-66b3-11e4-8668-4a3dcc28e360
+141113 19:43:49 [Note] WSREP: STATE EXCHANGE: got state msg: 84b2b3fa-66b3-11e4-8668-4a3dcc28e360 from 0 (node6)
+141113 19:43:49 [Note] WSREP: STATE EXCHANGE: got state msg: 84b2b3fa-66b3-11e4-8668-4a3dcc28e360 from 1 (node10)
+141113 19:43:49 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 9,
+	members    = 2/2 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 19:43:49 [Note] WSREP: Flow-control interval: [23, 23]
+141113 19:43:49 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 10: Primary, number of nodes: 2, my index: 1, protocol version 3
+141113 19:43:49 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 19:43:49 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 19:43:55 [Note] WSREP:  cleaning up da59213e (tcp://10.37.129.5:4567)
+141113 19:44:02 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 19:44:02 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 19:44:02 [Note] WSREP: declaring 65a1e3cd at tcp://10.37.129.5:4567 stable
+141113 19:44:02 [Note] WSREP: Node 030a5feb state prim
+141113 19:44:02 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+141113 19:44:02 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 19:44:02 [Note] WSREP: STATE EXCHANGE: sent state msg: 8c8c19bc-66b3-11e4-96d0-bfe66bea971b
+141113 19:44:02 [Note] WSREP: STATE EXCHANGE: got state msg: 8c8c19bc-66b3-11e4-96d0-bfe66bea971b from 2 (node10)
+141113 19:44:02 [Note] WSREP: STATE EXCHANGE: got state msg: 8c8c19bc-66b3-11e4-96d0-bfe66bea971b from 0 (node6)
+141113 19:44:03 [Note] WSREP: STATE EXCHANGE: got state msg: 8c8c19bc-66b3-11e4-96d0-bfe66bea971b from 1 (node5)
+141113 19:44:03 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 10,
+	members    = 3/3 (joined/total),
+	act_id     = 4,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 19:44:03 [Note] WSREP: Flow-control interval: [28, 28]
+141113 19:44:03 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 11: Primary, number of nodes: 3, my index: 2, protocol version 3
+141113 19:44:03 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 19:44:03 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141113 19:44:03 [Note] WSREP: Member 1 (node5) synced with group.
+141113 19:44:05 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 21:21:16 [Warning] Access denied for user 'clustercheckuser'@'localhost' (using password: YES)
+141113 21:29:36 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: tcp://10.37.129.5:4567 
+141113 21:29:37 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') reconnecting to 65a1e3cd (tcp://10.37.129.5:4567), attempt 0
+141113 21:29:38 [Note] WSREP: evs::proto(ae303da5, OPERATIONAL, view_id(REG,030a5feb,11)) suspecting node: 65a1e3cd
+141113 21:29:38 [Note] WSREP: evs::proto(ae303da5, OPERATIONAL, view_id(REG,030a5feb,11)) suspected node without join message, declaring inactive
+141113 21:29:39 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 21:29:39 [Note] WSREP: Node 030a5feb state prim
+141113 21:29:39 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 1, memb_num = 2
+141113 21:29:39 [Note] WSREP: forgetting 65a1e3cd (tcp://10.37.129.5:4567)
+141113 21:29:39 [Note] WSREP: deleting entry tcp://10.37.129.5:4567
+141113 21:29:39 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 21:29:39 [Note] WSREP: STATE EXCHANGE: sent state msg: 4d829a77-66c2-11e4-b2bf-cba6e52cdfb4
+141113 21:29:39 [Note] WSREP: STATE EXCHANGE: got state msg: 4d829a77-66c2-11e4-b2bf-cba6e52cdfb4 from 0 (node6)
+141113 21:29:39 [Note] WSREP: STATE EXCHANGE: got state msg: 4d829a77-66c2-11e4-b2bf-cba6e52cdfb4 from 1 (node10)
+141113 21:29:39 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 11,
+	members    = 2/2 (joined/total),
+	act_id     = 5,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 21:29:39 [Note] WSREP: Flow-control interval: [23, 23]
+141113 21:29:39 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:5, view# 12: Primary, number of nodes: 2, my index: 1, protocol version 3
+141113 21:29:39 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 21:29:39 [Note] WSREP: Assign initial position for certification: 5, protocol version: 2
+141113 21:29:40 [Warning] WSREP: discarding established (time wait) 65a1e3cd (tcp://10.37.129.5:4567) 
+141113 21:29:41 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 21:29:42 [Warning] WSREP: discarding established (time wait) 65a1e3cd (tcp://10.37.129.5:4567) 
+141113 21:29:42 [Note] WSREP:  cleaning up 65a1e3cd (tcp://10.37.129.5:4567)
+141113 21:29:43 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141113 21:29:45 [Note] WSREP: declaring 030a5feb at tcp://10.37.129.6:4567 stable
+141113 21:29:45 [Note] WSREP: declaring 65a1e3cd at tcp://10.37.129.5:4567 stable
+141113 21:29:45 [Note] WSREP: Node 030a5feb state prim
+141113 21:29:45 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 2, memb_num = 3
+141113 21:29:45 [Note] WSREP: STATE EXCHANGE: Waiting for state UUID.
+141113 21:29:45 [Note] WSREP: STATE EXCHANGE: sent state msg: 51171b56-66c2-11e4-a487-fead579aa139
+141113 21:29:45 [Note] WSREP: STATE EXCHANGE: got state msg: 51171b56-66c2-11e4-a487-fead579aa139 from 1 (node5)
+141113 21:29:45 [Note] WSREP: STATE EXCHANGE: got state msg: 51171b56-66c2-11e4-a487-fead579aa139 from 2 (node10)
+141113 21:29:45 [Note] WSREP: STATE EXCHANGE: got state msg: 51171b56-66c2-11e4-a487-fead579aa139 from 0 (node6)
+141113 21:29:45 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 12,
+	members    = 3/3 (joined/total),
+	act_id     = 5,
+	last_appl. = 0,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141113 21:29:45 [Note] WSREP: Flow-control interval: [28, 28]
+141113 21:29:45 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:5, view# 13: Primary, number of nodes: 3, my index: 2, protocol version 3
+141113 21:29:45 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141113 21:29:45 [Note] WSREP: Assign initial position for certification: 5, protocol version: 2
+141113 21:29:46 [Note] WSREP: (ae303da5, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141113 21:56:59 [Warning] Aborted connection 437 to db: 'unconnected' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+141114  1:07:18 [Note] /usr/local/mysql/bin/mysqld: Normal shutdown
+
+141114  1:07:18 [Note] WSREP: Stop replication
+141114  1:07:18 [Note] WSREP: Closing send monitor...
+141114  1:07:18 [Note] WSREP: Closed send monitor.
+141114  1:07:18 [Note] WSREP: gcomm: terminating thread
+141114  1:07:18 [Note] WSREP: gcomm: joining thread
+141114  1:07:18 [Note] WSREP: gcomm: closing backend

@@ -1,0 +1,296 @@
+141108  2:00:33 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141108  2:00:33 [Note] WSREP: wsrep_load(): loading provider library 'none'
+141108  2:00:33 [Note] WSREP: Service disconnected.
+141108  2:00:34 [Note] WSREP: Some threads may fail to exit.
+Error in my_thread_global_end(): 1 threads didn't exit
+141108  2:00:39 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141108  2:00:39 [Note] WSREP: wsrep_load(): loading provider library 'none'
+141108  2:00:39 [Note] WSREP: Service disconnected.
+141108  2:00:40 [Note] WSREP: Some threads may fail to exit.
+Error in my_thread_global_end(): 1 threads didn't exit
+141108 02:02:05 mysqld_safe Starting mysqld daemon with databases from /data/mysql/mysql3306/data
+141108 02:02:05 mysqld_safe Skipping wsrep-recover for empty datadir: /data/mysql/mysql3306/data
+141108 02:02:05 mysqld_safe Assigning 00000000-0000-0000-0000-000000000000:-1 to wsrep_start_position
+141108  2:02:05 [Note] WSREP: wsrep_start_position var submitted: '00000000-0000-0000-0000-000000000000:-1'
+141108  2:02:05 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141108  2:02:05 [Note] WSREP: wsrep_load(): loading provider library '/usr/local/mysql/lib/libgalera_smm.so'
+141108  2:02:05 [Note] WSREP: wsrep_load(): Galera 2.11(r318911d) by Codership Oy <info@codership.com> loaded successfully.
+141108  2:02:05 [Warning] WSREP: Could not open saved state file for reading: /data/mysql/mysql3306/data//grastate.dat
+141108  2:02:05 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1
+141108  2:02:05 [Note] WSREP: Preallocating 134219048/134219048 bytes in '/data/mysql/mysql3306/data//galera.cache'...
+141108  2:02:05 [Note] WSREP: Passing config to GCS: base_host = 10.37.129.6; base_port = 4567; cert.log_conflicts = no; debug = no; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /data/mysql/mysql3306/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /data/mysql/mysql3306/data//galera.cache; gcache.page_size = 128M; gcache.size = 128M; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.version = 0; pc.announce_timeout = PT3S; pc.checksum = false; pc.ignore_quorum = false; pc.ignore_sb = false; pc.npvo = false; pc.version = 0; pc.wait_prim = true; pc.wait_prim_timeout = P30S; pc.weight = 1; prot
+141108  2:02:05 [Note] WSREP: Assign initial position for certification: -1, protocol version: -1
+141108  2:02:05 [Note] WSREP: wsrep_sst_grab()
+141108  2:02:05 [Note] WSREP: Start replication
+141108  2:02:05 [Note] WSREP: Setting initial position to 00000000-0000-0000-0000-000000000000:-1
+141108  2:02:05 [Note] WSREP: protonet asio version 0
+141108  2:02:05 [Note] WSREP: backend: asio
+141108  2:02:05 [Note] WSREP: GMCast version 0
+141108  2:02:05 [Note] WSREP: (2e9dff5b, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+141108  2:02:05 [Note] WSREP: (2e9dff5b, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+141108  2:02:05 [Note] WSREP: EVS version 0
+141108  2:02:05 [Note] WSREP: PC version 0
+141108  2:02:05 [Note] WSREP: gcomm: connecting to group 'pxc_wubx', peer '10.37.129.5:,10.37.129.6:,10.37.129.10:'
+141108  2:02:05 [Warning] WSREP: (2e9dff5b, 'tcp://0.0.0.0:4567') address 'tcp://10.37.129.6:4567' points to own listening address, blacklisting
+141108  2:02:05 [Note] WSREP: (2e9dff5b, 'tcp://0.0.0.0:4567') address 'tcp://10.37.129.6:4567' pointing to uuid 2e9dff5b is blacklisted, skipping
+141108  2:02:05 [Note] WSREP: (2e9dff5b, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141108  2:02:05 [Note] WSREP: declaring ae303da5 at tcp://10.37.129.10:4567 stable
+141108  2:02:05 [Note] WSREP: Node ae303da5 state prim
+141108  2:02:05 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.5:4567
+141108  2:02:06 [Note] WSREP: gcomm: connected
+141108  2:02:06 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+141108  2:02:06 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+141108  2:02:06 [Note] WSREP: Opened channel 'pxc_wubx'
+141108  2:02:06 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 2
+141108  2:02:06 [Note] WSREP: Waiting for SST to complete.
+141108  2:02:06 [Note] WSREP: STATE_EXCHANGE: sent state UUID: 2f379038-66a8-11e4-bc51-3659272d1ada
+141108  2:02:06 [Note] WSREP: STATE EXCHANGE: sent state msg: 2f379038-66a8-11e4-bc51-3659272d1ada
+141108  2:02:06 [Note] WSREP: STATE EXCHANGE: got state msg: 2f379038-66a8-11e4-bc51-3659272d1ada from 0 (node6)
+141108  2:02:06 [Note] WSREP: STATE EXCHANGE: got state msg: 2f379038-66a8-11e4-bc51-3659272d1ada from 1 (node10)
+141108  2:02:06 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 1,
+	members    = 1/2 (joined/total),
+	act_id     = 4,
+	last_appl. = -1,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141108  2:02:06 [Note] WSREP: Flow-control interval: [23, 23]
+141108  2:02:06 [Note] WSREP: Shifting OPEN -> PRIMARY (TO: 4)
+141108  2:02:06 [Note] WSREP: State transfer required: 
+	Group state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4
+	Local state: 00000000-0000-0000-0000-000000000000:-1
+141108  2:02:06 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 2: Primary, number of nodes: 2, my index: 0, protocol version 3
+141108  2:02:06 [Warning] WSREP: Gap in state sequence. Need state transfer.
+141108  2:02:06 [Note] WSREP: Running: 'wsrep_sst_xtrabackup --role 'joiner' --address '10.37.129.6' --auth 'sst:wubxwubx' --datadir '/data/mysql/mysql3306/data/' --defaults-file '/etc/my.cnf' --parent '23283''
+WSREP_SST: [INFO] Streaming with tar (20141108 02:02:06.128)
+WSREP_SST: [INFO] Using socat as streamer (20141108 02:02:06.129)
+which: no socat in (/usr/sbin:/sbin:/opt/mysql/Percona-XtraDB-Cluster-5.5.39-rel36.0-25.11.828.Linux.x86_64//bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/Percona-XtraDB-Cluster-5.5.39-rel36.0-25.11.828.Linux.x86_64/bin)
+WSREP_SST: [ERROR] socat not found in path: /usr/sbin:/sbin:/opt/mysql/Percona-XtraDB-Cluster-5.5.39-rel36.0-25.11.828.Linux.x86_64//bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/Percona-XtraDB-Cluster-5.5.39-rel36.0-25.11.828.Linux.x86_64/bin (20141108 02:02:06.131)
+141108  2:02:06 [ERROR] WSREP: Failed to read 'ready <addr>' from: wsrep_sst_xtrabackup --role 'joiner' --address '10.37.129.6' --auth 'sst:wubxwubx' --datadir '/data/mysql/mysql3306/data/' --defaults-file '/etc/my.cnf' --parent '23283'
+	Read: '(null)'
+141108  2:02:06 [ERROR] WSREP: Process completed with error: wsrep_sst_xtrabackup --role 'joiner' --address '10.37.129.6' --auth 'sst:wubxwubx' --datadir '/data/mysql/mysql3306/data/' --defaults-file '/etc/my.cnf' --parent '23283': 2 (No such file or directory)
+141108  2:02:06 [ERROR] WSREP: Failed to prepare for 'xtrabackup' SST. Unrecoverable.
+141108  2:02:06 [ERROR] Aborting
+
+141108  2:02:08 [Note] WSREP: (2e9dff5b, 'tcp://0.0.0.0:4567') turning message relay requesting off
+141108  2:02:08 [Note] WSREP: Closing send monitor...
+141108  2:02:08 [Note] WSREP: Closed send monitor.
+141108  2:02:08 [Note] WSREP: gcomm: terminating thread
+141108  2:02:08 [Note] WSREP: gcomm: joining thread
+141108  2:02:08 [Note] WSREP: gcomm: closing backend
+141108  2:02:09 [Note] WSREP: New COMPONENT: primary = no, bootstrap = no, my_idx = 0, memb_num = 1
+141108  2:02:09 [Note] WSREP: gcomm: closed
+141108  2:02:09 [Note] WSREP: Flow-control interval: [16, 16]
+141108  2:02:09 [Note] WSREP: Received NON-PRIMARY.
+141108  2:02:09 [Note] WSREP: Shifting PRIMARY -> OPEN (TO: 4)
+141108  2:02:09 [Note] WSREP: Received self-leave message.
+141108  2:02:09 [Note] WSREP: Flow-control interval: [0, 0]
+141108  2:02:09 [Note] WSREP: Received SELF-LEAVE. Closing connection.
+141108  2:02:09 [Note] WSREP: Shifting OPEN -> CLOSED (TO: 4)
+141108  2:02:09 [Note] WSREP: RECV thread exiting 0: Success
+141108  2:02:09 [Note] WSREP: recv_thread() joined.
+141108  2:02:09 [Note] WSREP: Closing replication queue.
+141108  2:02:09 [Note] WSREP: Closing slave action queue.
+141108  2:02:09 [Note] WSREP: Service disconnected.
+141108  2:02:09 [Note] WSREP: rollbacker thread exiting
+141108  2:02:10 [Note] WSREP: Some threads may fail to exit.
+141108  2:02:10 [Note] /usr/local/mysql/bin/mysqld: Shutdown complete
+
+Error in my_thread_global_end(): 1 threads didn't exit
+141108 02:02:15 mysqld_safe mysqld from pid file /data/mysql/mysql3306/data/mysql.pid ended
+141108 02:22:18 mysqld_safe Starting mysqld daemon with databases from /data/mysql/mysql3306/data
+141108 02:22:18 mysqld_safe WSREP: Running position recovery with --log_error='/data/mysql/mysql3306/data/wsrep_recovery.Iork87' --pid-file='/data/mysql/mysql3306/data/node6-recover.pid'
+141108 02:22:20 mysqld_safe WSREP: Recovered position 00000000-0000-0000-0000-000000000000:-1
+141108  2:22:20 [Note] WSREP: wsrep_start_position var submitted: '00000000-0000-0000-0000-000000000000:-1'
+141108  2:22:20 [Note] WSREP: Read nil XID from storage engines, skipping position init
+141108  2:22:20 [Note] WSREP: wsrep_load(): loading provider library '/usr/local/mysql/lib/libgalera_smm.so'
+141108  2:22:20 [Note] WSREP: wsrep_load(): Galera 2.11(r318911d) by Codership Oy <info@codership.com> loaded successfully.
+141108  2:22:20 [Note] WSREP: Found saved state: 00000000-0000-0000-0000-000000000000:-1
+141108  2:22:20 [Note] WSREP: Reusing existing '/data/mysql/mysql3306/data//galera.cache'.
+141108  2:22:20 [Note] WSREP: Passing config to GCS: base_host = 10.37.129.6; base_port = 4567; cert.log_conflicts = no; debug = no; evs.inactive_check_period = PT0.5S; evs.inactive_timeout = PT15S; evs.join_retrans_period = PT1S; evs.max_install_timeouts = 3; evs.send_window = 4; evs.stats_report_period = PT1M; evs.suspect_timeout = PT5S; evs.user_send_window = 2; evs.view_forget_timeout = PT24H; gcache.dir = /data/mysql/mysql3306/data/; gcache.keep_pages_size = 0; gcache.mem_size = 0; gcache.name = /data/mysql/mysql3306/data//galera.cache; gcache.page_size = 128M; gcache.size = 128M; gcs.fc_debug = 0; gcs.fc_factor = 1.0; gcs.fc_limit = 16; gcs.fc_master_slave = no; gcs.max_packet_size = 64500; gcs.max_throttle = 0.25; gcs.recv_q_hard_limit = 9223372036854775807; gcs.recv_q_soft_limit = 0.25; gcs.sync_donor = no; gmcast.version = 0; pc.announce_timeout = PT3S; pc.checksum = false; pc.ignore_quorum = false; pc.ignore_sb = false; pc.npvo = false; pc.version = 0; pc.wait_prim = true; pc.wait_prim_timeout = P30S; pc.weight = 1; prot
+141108  2:22:20 [Note] WSREP: Assign initial position for certification: -1, protocol version: -1
+141108  2:22:20 [Note] WSREP: wsrep_sst_grab()
+141108  2:22:20 [Note] WSREP: Start replication
+141108  2:22:20 [Note] WSREP: Setting initial position to 00000000-0000-0000-0000-000000000000:-1
+141108  2:22:20 [Note] WSREP: protonet asio version 0
+141108  2:22:20 [Note] WSREP: backend: asio
+141108  2:22:20 [Note] WSREP: GMCast version 0
+141108  2:22:20 [Note] WSREP: (030a5feb, 'tcp://0.0.0.0:4567') listening at tcp://0.0.0.0:4567
+141108  2:22:20 [Note] WSREP: (030a5feb, 'tcp://0.0.0.0:4567') multicast: , ttl: 1
+141108  2:22:20 [Note] WSREP: EVS version 0
+141108  2:22:20 [Note] WSREP: PC version 0
+141108  2:22:20 [Note] WSREP: gcomm: connecting to group 'pxc_wubx', peer '10.37.129.5:,10.37.129.6:,10.37.129.10:'
+141108  2:22:20 [Warning] WSREP: (030a5feb, 'tcp://0.0.0.0:4567') address 'tcp://10.37.129.6:4567' points to own listening address, blacklisting
+141108  2:22:20 [Note] WSREP: (030a5feb, 'tcp://0.0.0.0:4567') address 'tcp://10.37.129.6:4567' pointing to uuid 030a5feb is blacklisted, skipping
+141108  2:22:20 [Note] WSREP: (030a5feb, 'tcp://0.0.0.0:4567') turning message relay requesting on, nonlive peers: 
+141108  2:22:20 [Note] WSREP: declaring ae303da5 at tcp://10.37.129.10:4567 stable
+141108  2:22:20 [Note] WSREP: Node ae303da5 state prim
+141108  2:22:20 [Note] WSREP: discarding pending addr without UUID: tcp://10.37.129.5:4567
+141108  2:22:20 [Note] WSREP: gcomm: connected
+141108  2:22:20 [Note] WSREP: Changing maximum packet size to 64500, resulting msg size: 32636
+141108  2:22:20 [Note] WSREP: Shifting CLOSED -> OPEN (TO: 0)
+141108  2:22:20 [Note] WSREP: Opened channel 'pxc_wubx'
+141108  2:22:20 [Note] WSREP: New COMPONENT: primary = yes, bootstrap = no, my_idx = 0, memb_num = 2
+141108  2:22:20 [Note] WSREP: Waiting for SST to complete.
+141108  2:22:20 [Note] WSREP: STATE_EXCHANGE: sent state UUID: 0357b799-66ab-11e4-bc51-0fa5918da442
+141108  2:22:20 [Note] WSREP: STATE EXCHANGE: sent state msg: 0357b799-66ab-11e4-bc51-0fa5918da442
+141108  2:22:20 [Note] WSREP: STATE EXCHANGE: got state msg: 0357b799-66ab-11e4-bc51-0fa5918da442 from 0 (node6)
+141108  2:22:20 [Note] WSREP: STATE EXCHANGE: got state msg: 0357b799-66ab-11e4-bc51-0fa5918da442 from 1 (node10)
+141108  2:22:20 [Note] WSREP: Quorum results:
+	version    = 2,
+	component  = PRIMARY,
+	conf_id    = 3,
+	members    = 1/2 (joined/total),
+	act_id     = 4,
+	last_appl. = -1,
+	protocols  = 0/4/3 (gcs/repl/appl),
+	group UUID = 634d7d4c-6b1d-11e4-b228-836187c0ec19
+141108  2:22:20 [Note] WSREP: Flow-control interval: [23, 23]
+141108  2:22:20 [Note] WSREP: Shifting OPEN -> PRIMARY (TO: 4)
+141108  2:22:20 [Note] WSREP: State transfer required: 
+	Group state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4
+	Local state: 00000000-0000-0000-0000-000000000000:-1
+141108  2:22:20 [Note] WSREP: New cluster view: global state: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4, view# 4: Primary, number of nodes: 2, my index: 0, protocol version 3
+141108  2:22:20 [Warning] WSREP: Gap in state sequence. Need state transfer.
+141108  2:22:20 [Note] WSREP: Running: 'wsrep_sst_xtrabackup --role 'joiner' --address '10.37.129.6' --auth 'sst:wubxwubx' --datadir '/data/mysql/mysql3306/data/' --defaults-file '/etc/my.cnf' --parent '24786''
+WSREP_SST: [INFO] Streaming with tar (20141108 02:22:21.013)
+WSREP_SST: [INFO] Using socat as streamer (20141108 02:22:21.015)
+WSREP_SST: [INFO] Evaluating socat -u TCP-LISTEN:4444,reuseaddr stdio | tar xfi - --recursive-unlink -h; RC=( ${PIPESTATUS[@]} ) (20141108 02:22:21.024)
+141108  2:22:21 [Note] WSREP: Prepared SST request: xtrabackup|10.37.129.6:4444/xtrabackup_sst
+141108  2:22:21 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
+141108  2:22:21 [Note] WSREP: Assign initial position for certification: 4, protocol version: 2
+141108  2:22:21 [Warning] WSREP: Failed to prepare for incremental state transfer: Local state UUID (00000000-0000-0000-0000-000000000000) does not match group state UUID (634d7d4c-6b1d-11e4-b228-836187c0ec19): 1 (Operation not permitted)
+	 at galera/src/replicator_str.cpp:prepare_for_IST():447. IST will be unavailable.
+141108  2:22:21 [Note] WSREP: Node 0 (node6) requested state transfer from '*any*'. Selected 1 (node10)(SYNCED) as donor.
+141108  2:22:21 [Note] WSREP: Shifting PRIMARY -> JOINER (TO: 4)
+141108  2:22:21 [Note] WSREP: Requesting state transfer: success, donor: 1
+141108  2:22:23 [Note] WSREP: (030a5feb, 'tcp://0.0.0.0:4567') turning message relay requesting off
+tar: ./backup-my.cnf: time stamp 2014-11-13 18:43:01 is 490835.066362273 s in the future
+tar: ibdata1: time stamp 2014-11-13 18:14:21 is 489113.061078068 s in the future
+tar: mysql/db.frm: time stamp 2014-11-13 18:09:23 is 488815.060912648 s in the future
+tar: mysql/db.MYI: time stamp 2014-11-13 18:14:20 is 489112.058011334 s in the future
+tar: mysql/db.MYD: time stamp 2014-11-13 18:14:20 is 489112.055362107 s in the future
+tar: mysql/host.frm: time stamp 2014-11-13 18:09:23 is 488815.05290195 s in the future
+tar: mysql/host.MYI: time stamp 2014-11-13 18:09:23 is 488815.050425927 s in the future
+tar: mysql/host.MYD: time stamp 2014-11-13 18:09:23 is 488815.047957897 s in the future
+tar: mysql/user.frm: time stamp 2014-11-13 18:09:23 is 488815.045644377 s in the future
+tar: mysql/user.MYI: time stamp 2014-11-13 18:43:03 is 490835.043175513 s in the future
+tar: mysql/user.MYD: time stamp 2014-11-13 18:14:20 is 489112.040727067 s in the future
+tar: mysql/func.frm: time stamp 2014-11-13 18:09:23 is 488815.038351576 s in the future
+tar: mysql/func.MYI: time stamp 2014-11-13 18:09:23 is 488815.036225633 s in the future
+tar: mysql/func.MYD: time stamp 2014-11-13 18:09:23 is 488815.034003064 s in the future
+tar: mysql/plugin.frm: time stamp 2014-11-13 18:09:23 is 488815.031751525 s in the future
+tar: mysql/plugin.MYI: time stamp 2014-11-13 18:09:23 is 488815.029417666 s in the future
+tar: mysql/plugin.MYD: time stamp 2014-11-13 18:09:23 is 488815.026930338 s in the future
+tar: mysql/servers.frm: time stamp 2014-11-13 18:09:23 is 488815.024384321 s in the future
+tar: mysql/servers.MYI: time stamp 2014-11-13 18:09:23 is 488815.021816146 s in the future
+tar: mysql/servers.MYD: time stamp 2014-11-13 18:09:23 is 488815.019348658 s in the future
+tar: mysql/tables_priv.frm: time stamp 2014-11-13 18:09:23 is 488815.017198842 s in the future
+tar: mysql/tables_priv.MYI: time stamp 2014-11-13 18:09:23 is 488815.015025991 s in the future
+tar: mysql/tables_priv.MYD: time stamp 2014-11-13 18:09:23 is 488815.012744176 s in the future
+tar: mysql/columns_priv.frm: time stamp 2014-11-13 18:09:23 is 488815.010381785 s in the future
+tar: mysql/columns_priv.MYI: time stamp 2014-11-13 18:09:23 is 488815.008284576 s in the future
+tar: mysql/columns_priv.MYD: time stamp 2014-11-13 18:09:23 is 488815.006087418 s in the future
+tar: mysql/help_topic.frm: time stamp 2014-11-13 18:09:23 is 488815.002424904 s in the future
+tar: mysql/help_topic.MYI: time stamp 2014-11-13 18:09:30 is 488821.9997606 s in the future
+tar: mysql/help_topic.MYD: time stamp 2014-11-13 18:09:29 is 488820.995126911 s in the future
+tar: mysql/help_category.frm: time stamp 2014-11-13 18:09:23 is 488814.992672732 s in the future
+tar: mysql/help_category.MYI: time stamp 2014-11-13 18:09:30 is 488821.989850741 s in the future
+tar: mysql/help_category.MYD: time stamp 2014-11-13 18:09:29 is 488820.987521304 s in the future
+tar: mysql/help_relation.frm: time stamp 2014-11-13 18:09:23 is 488814.985339973 s in the future
+tar: mysql/help_relation.MYI: time stamp 2014-11-13 18:09:30 is 488821.98283133 s in the future
+tar: mysql/help_relation.MYD: time stamp 2014-11-13 18:09:29 is 488820.980604625 s in the future
+tar: mysql/help_keyword.frm: time stamp 2014-11-13 18:09:23 is 488814.977869037 s in the future
+tar: mysql/help_keyword.MYI: time stamp 2014-11-13 18:09:30 is 488821.975595448 s in the future
+tar: mysql/help_keyword.MYD: time stamp 2014-11-13 18:09:29 is 488820.972736788 s in the future
+tar: mysql/time_zone_name.frm: time stamp 2014-11-13 18:09:23 is 488814.970612975 s in the future
+tar: mysql/time_zone_name.MYI: time stamp 2014-11-13 18:09:23 is 488814.968375683 s in the future
+tar: mysql/time_zone_name.MYD: time stamp 2014-11-13 18:09:23 is 488814.965848089 s in the future
+tar: mysql/time_zone.frm: time stamp 2014-11-13 18:09:23 is 488814.96331654 s in the future
+tar: mysql/time_zone.MYI: time stamp 2014-11-13 18:09:23 is 488814.960960379 s in the future
+tar: mysql/time_zone.MYD: time stamp 2014-11-13 18:09:23 is 488814.958607606 s in the future
+tar: mysql/time_zone_transition.frm: time stamp 2014-11-13 18:09:23 is 488814.9563402 s in the future
+tar: mysql/time_zone_transition.MYI: time stamp 2014-11-13 18:09:23 is 488814.953923507 s in the future
+tar: mysql/time_zone_transition.MYD: time stamp 2014-11-13 18:09:23 is 488814.951934278 s in the future
+tar: mysql/time_zone_transition_type.frm: time stamp 2014-11-13 18:09:23 is 488814.949812494 s in the future
+tar: mysql/time_zone_transition_type.MYI: time stamp 2014-11-13 18:09:23 is 488814.947535945 s in the future
+tar: mysql/time_zone_transition_type.MYD: time stamp 2014-11-13 18:09:23 is 488814.945255544 s in the future
+tar: mysql/time_zone_leap_second.frm: time stamp 2014-11-13 18:09:23 is 488814.942990347 s in the future
+tar: mysql/time_zone_leap_second.MYI: time stamp 2014-11-13 18:09:23 is 488814.94063182 s in the future
+tar: mysql/time_zone_leap_second.MYD: time stamp 2014-11-13 18:09:23 is 488814.938431139 s in the future
+tar: mysql/proc.frm: time stamp 2014-11-13 18:09:23 is 488814.936319693 s in the future
+tar: mysql/proc.MYI: time stamp 2014-11-13 18:09:23 is 488814.933830181 s in the future
+tar: mysql/proc.MYD: time stamp 2014-11-13 18:09:23 is 488814.931524144 s in the future
+tar: mysql/procs_priv.frm: time stamp 2014-11-13 18:09:23 is 488814.928935844 s in the future
+tar: mysql/procs_priv.MYI: time stamp 2014-11-13 18:09:23 is 488814.926558665 s in the future
+tar: mysql/procs_priv.MYD: time stamp 2014-11-13 18:09:23 is 488814.924292277 s in the future
+tar: mysql/general_log.frm: time stamp 2014-11-13 18:09:23 is 488814.921835588 s in the future
+tar: mysql/general_log.CSM: time stamp 2014-11-13 18:09:23 is 488814.919451872 s in the future
+tar: mysql/general_log.CSV: time stamp 2014-11-13 18:09:23 is 488814.917302828 s in the future
+tar: mysql/slow_log.frm: time stamp 2014-11-13 18:09:23 is 488814.915176452 s in the future
+tar: mysql/slow_log.CSM: time stamp 2014-11-13 18:09:23 is 488814.912803056 s in the future
+tar: mysql/slow_log.CSV: time stamp 2014-11-13 18:09:23 is 488814.91078713 s in the future
+tar: mysql/event.frm: time stamp 2014-11-13 18:09:23 is 488814.908720021 s in the future
+tar: mysql/event.MYI: time stamp 2014-11-13 18:09:23 is 488814.906495809 s in the future
+tar: mysql/event.MYD: time stamp 2014-11-13 18:09:23 is 488814.904404866 s in the future
+tar: mysql/ndb_binlog_index.frm: time stamp 2014-11-13 18:09:23 is 488814.901863168 s in the future
+tar: mysql/ndb_binlog_index.MYI: time stamp 2014-11-13 18:09:23 is 488814.899373563 s in the future
+tar: mysql/ndb_binlog_index.MYD: time stamp 2014-11-13 18:09:23 is 488814.897071415 s in the future
+tar: mysql/proxies_priv.frm: time stamp 2014-11-13 18:09:23 is 488814.894630605 s in the future
+tar: mysql/proxies_priv.MYI: time stamp 2014-11-13 18:09:23 is 488814.892230273 s in the future
+tar: mysql/proxies_priv.MYD: time stamp 2014-11-13 18:09:23 is 488814.890146399 s in the future
+tar: performance_schema/db.opt: time stamp 2014-11-13 18:09:23 is 488814.887333872 s in the future
+tar: performance_schema/cond_instances.frm: time stamp 2014-11-13 18:09:23 is 488814.885167664 s in the future
+tar: performance_schema/events_waits_current.frm: time stamp 2014-11-13 18:09:23 is 488814.882892164 s in the future
+tar: performance_schema/events_waits_history.frm: time stamp 2014-11-13 18:09:23 is 488814.880750923 s in the future
+tar: performance_schema/events_waits_history_long.frm: time stamp 2014-11-13 18:09:23 is 488814.87834891 s in the future
+tar: performance_schema/events_waits_summary_by_instance.frm: time stamp 2014-11-13 18:09:23 is 488814.875976008 s in the future
+tar: performance_schema/events_waits_summary_by_thread_by_event_name.frm: time stamp 2014-11-13 18:09:23 is 488814.87377737 s in the future
+tar: performance_schema/events_waits_summary_global_by_event_name.frm: time stamp 2014-11-13 18:09:23 is 488814.871620961 s in the future
+tar: performance_schema/file_instances.frm: time stamp 2014-11-13 18:09:23 is 488814.868968318 s in the future
+tar: performance_schema/file_summary_by_event_name.frm: time stamp 2014-11-13 18:09:23 is 488814.866664318 s in the future
+tar: performance_schema/file_summary_by_instance.frm: time stamp 2014-11-13 18:09:23 is 488814.864201755 s in the future
+tar: performance_schema/mutex_instances.frm: time stamp 2014-11-13 18:09:23 is 488814.861865741 s in the future
+tar: performance_schema/performance_timers.frm: time stamp 2014-11-13 18:09:23 is 488814.859789242 s in the future
+tar: performance_schema/rwlock_instances.frm: time stamp 2014-11-13 18:09:23 is 488814.857420903 s in the future
+tar: performance_schema/setup_consumers.frm: time stamp 2014-11-13 18:09:23 is 488814.854942285 s in the future
+tar: performance_schema/setup_instruments.frm: time stamp 2014-11-13 18:09:23 is 488814.852293424 s in the future
+tar: performance_schema/setup_timers.frm: time stamp 2014-11-13 18:09:23 is 488814.849620531 s in the future
+tar: performance_schema/threads.frm: time stamp 2014-11-13 18:09:23 is 488814.847431288 s in the future
+tar: ./xtrabackup_galera_info: time stamp 2014-11-13 18:43:03 is 490834.841928556 s in the future
+tar: ./xtrabackup_binlog_info: time stamp 2014-11-13 18:43:03 is 490834.835484163 s in the future
+tar: xtrabackup_logfile: time stamp 2014-11-13 18:43:03 is 490833.8176522 s in the future
+tar: xtrabackup_checkpoints: time stamp 2014-11-13 18:43:04 is 490834.81756856 s in the future
+tar: ./xtrabackup_info: time stamp 2014-11-13 18:43:04 is 490834.817516503 s in the future
+141108  2:22:29 [Note] WSREP: 1 (node10): State transfer to 0 (node6) complete.
+141108  2:22:29 [Note] WSREP: Member 1 (node10) synced with group.
+WSREP_SST: [INFO] Proceeding with SST (20141108 02:22:29.192)
+WSREP_SST: [INFO] Removing existing ib_logfile files (20141108 02:22:29.193)
+WSREP_SST: [INFO] Preparing the backup at /data/mysql/mysql3306/data/ (20141108 02:22:29.250)
+WSREP_SST: [INFO] Evaluating innobackupex --defaults-file=/etc/my.cnf --apply-log $rebuildcmd ${DATA} &>${DATA}/innobackup.prepare.log (20141108 02:22:29.251)
+WSREP_SST: [INFO] Total time on joiner: 0 seconds (20141108 02:22:33.033)
+WSREP_SST: [INFO] Removing the sst_in_progress file (20141108 02:22:33.035)
+141108  2:22:33 [Note] WSREP: SST complete, seqno: 4
+141108  2:22:33 [Note] Plugin 'FEDERATED' is disabled.
+141108  2:22:33 InnoDB: The InnoDB memory heap is disabled
+141108  2:22:33 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+141108  2:22:33 InnoDB: Compressed tables use zlib 1.2.3
+141108  2:22:33 InnoDB: Using Linux native AIO
+141108  2:22:33 InnoDB: Initializing buffer pool, size = 100.0M
+141108  2:22:33 InnoDB: Completed initialization of buffer pool
+141108  2:22:33 InnoDB: highest supported file format is Barracuda.
+141108  2:22:33  InnoDB: Waiting for the background threads to start
+141108  2:22:34 Percona XtraDB (http://www.percona.com) 5.5.39-36.0 started; log sequence number 1598998
+141108  2:22:34 [Note] Event Scheduler: Loaded 0 events
+141108  2:22:34 [Note] WSREP: Signalling provider to continue.
+141108  2:22:34 [Note] WSREP: SST received: 634d7d4c-6b1d-11e4-b228-836187c0ec19:4
+141108  2:22:34 [Note] /usr/local/mysql/bin/mysqld: ready for connections.
+Version: '5.5.39-36.0-25.11-log'  socket: '/tmp/mysql.sock'  port: 3306  Percona XtraDB Cluster binary (GPL) 5.5.39-25.11, Revision 828, wsrep_25.11.r4023
+141108  2:22:34 [Note] WSREP: 0 (node6): State transfer from 1 (node10) complete.
+141108  2:22:34 [Note] WSREP: Shifting JOINER -> JOINED (TO: 4)
+141108  2:22:34 [Note] WSREP: Member 0 (node6) synced with group.
+141108  2:22:34 [Note] WSREP: Shifting JOINED -> SYNCED (TO: 4)
+141108  2:22:34 [Note] WSREP: Synchronized with group, ready for connections
+141108  2:22:34 [Note] WSREP: wsrep_notify_cmd is not defined, skipping notification.
