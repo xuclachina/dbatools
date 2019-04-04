@@ -1,0 +1,7 @@
+[mysql]
+HOST=47.96.106.224
+PORT=3306
+USERNAME=xucl
+PASSWORD=xuclxucl
+ENDPOINT=47.96.106.224
+TAGS=idc=dx,region=hangzhou
