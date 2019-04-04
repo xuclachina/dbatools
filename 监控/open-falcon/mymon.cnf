@@ -1,7 +1,7 @@
 [mysql]
-HOST=47.96.106.224
+HOST=127.0.0.1
 PORT=3306
 USERNAME=xucl
 PASSWORD=xuclxucl
-ENDPOINT=47.96.106.224
+ENDPOINT=127.0.0.1
 TAGS=idc=dx,region=hangzhou
