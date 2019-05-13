@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: DBUtils
+Version: 1.3
+Summary: Database connections for multi-threaded environments.
+Home-page: https://cito.github.io/DBUtils/
+Author: Christoph Zwerschke
+Author-email: cito@online.de
+License: MIT License
+Description: DBUtils
+        =======
+        
+        DBUtils is a suite of tools providing solid, persistent and pooled connections
+        to a database that can be used in all kinds of multi-threaded environments
+        like Webware for Python or other web application servers. The suite supports
+        DB-API 2 compliant database interfaces and the classic PyGreSQL interface.
+        
+        The current version of DBUtils supports Python versions 2.6, 2.7 and 3.4 - 3.7.
+        
+        The DBUtils home page can be found here: https://cito.github.io/DBUtils/
+        
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown

@@ -4,6 +4,8 @@
 import logging
 import traceback
 import pymysql
+import warnings
+warnings.filterwarnings("ignore")
 
 from DBUtils.PooledDB import PooledDB
 
@@ -68,10 +70,13 @@ class DBAction:
         """
         self.cursor.execute(sql, params)
         result = self.cursor.fetchall()
-        return result
+        description = self.cursor.description
+        return result, description
 
     def commit(self):
         self.conn.commit()
 
     def rollback(self):
         self.conn.rollback()
+
+
