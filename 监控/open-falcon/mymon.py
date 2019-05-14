@@ -161,5 +161,5 @@ if __name__ == '__main__':
         alive_metrics = generate_metric(endpoint, "mysql_alive", ts, 60, 0, "GAUGE", tags)
         payload.append(alive_metrics)
 
-    r = requests.post("http://127.0.0.1:1988/v1/push", data=json.dumps())
+    r = requests.post("http://127.0.0.1:1988/v1/push", data=json.dumps(payload))
     print(r.text)
