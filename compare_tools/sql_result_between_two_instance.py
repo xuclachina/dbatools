@@ -70,3 +70,6 @@ if __name__ == '__main__':
             for sql in sql_list:
 
                 print(client.get_sql_md5(sql.strip('\n')))
+
+
+

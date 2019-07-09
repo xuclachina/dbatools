@@ -18,7 +18,7 @@ class DBPool:
         self.host = port
         self.host = user
         self.host = password
-        self.pool = PooledDB(creator=pymysql, mincached=1, maxcached=10, maxconnections=100, 
+        self.pool = PooledDB(creator=pymysql, mincached=10, maxcached=50, maxconnections=200, 
                              blocking=True, host=host, port=int(port), user=user, passwd=password,
                              db="information_schema", charset='utf8')
 
