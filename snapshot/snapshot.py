@@ -2,7 +2,7 @@
 
 # -------------------------------------------------------------------------------
 # Name:         snapshot
-# Description:  
+# Description:
 # Author:       xucl
 # Date:         2019-04-17
 # -------------------------------------------------------------------------------
@@ -10,6 +10,7 @@
 from utils import *
 from db_pool import DBAction
 from threading import Lock
+
 
 class Snapshot(object):
     def __init__(self, connection_settings, interval=None, conditions=None, storedir=None):
@@ -27,14 +28,14 @@ class Snapshot(object):
 
     def run(self):
         condition_dict = eval(self.conditions)
-        
+
         while True:
             lock = Lock()
-            global dbaction 
+            global dbaction
             dbaction = DBAction(self.conn_setting)
             status_dict1 = get_mysql_status(dbaction)
             sys_dict1 = get_sys_status()
-            slow_log,error_log = get_log_dir(dbaction)
+            slow_log, error_log = get_log_dir(dbaction)
             slave_status_dict = get_slave_status(dbaction)
 
             time.sleep(1)
@@ -43,7 +44,7 @@ class Snapshot(object):
             sys_dict2 = get_sys_status()
 
             origin_status_list = ['Threads_connected', 'Threads_running', 'Innodb_row_lock_current_waits']
-            origin_sys_status_list= ['cpu_user', 'cpu_sys', 'cpu_iowait']
+            origin_sys_status_list = ['cpu_user', 'cpu_sys', 'cpu_iowait']
             diff_status_list = ['Slow_queries', 'Innodb_buffer_pool_wait_free']
             diff_sys_status = ['sys_iops']
 
@@ -61,58 +62,27 @@ class Snapshot(object):
             if collect_flag:
                 lock.acquire()
                 thread_objs = []
-                dbaction = DBAction(self.conn_setting)
-                t1 = do_in_thread(mysql_variables, dbaction, filedir)
-                thread_objs.append(t1)
-                dbaction = DBAction(self.conn_setting)
-                t2 = do_in_thread(mysql_status, dbaction, filedir)
-                thread_objs.append(t2)
-                dbaction = DBAction(self.conn_setting)
-                t3 = do_in_thread(mysql_innodb_status, dbaction, filedir)
-                thread_objs.append(t3)
-                dbaction = DBAction(self.conn_setting)
-                t4 = do_in_thread(mysql_slave_status, dbaction, filedir)
-                thread_objs.append(t4)
-                dbaction = DBAction(self.conn_setting)
-                t5 = do_in_thread(mysql_processlist, dbaction, filedir)
-                thread_objs.append(t5)
-                dbaction = DBAction(self.conn_setting)
-                t6 = do_in_thread(mysql_transactions, dbaction, filedir)
-                thread_objs.append(t6)
-                dbaction = DBAction(self.conn_setting)
-                t7 = do_in_thread(mysql_lock_info, dbaction, filedir)
-                thread_objs.append(t7)
-                t8 = do_in_thread(mysql_error_log, slow_log, filedir)
-                thread_objs.append(t8)
-                t9 = do_in_thread(mysql_slow_log, error_log, filedir)
-                thread_objs.append(t9)
-                t10 = do_in_thread(system_message, '/var/log/messages', filedir)
-                thread_objs.append(t10)
-                t11 = do_in_thread(system_dmesg, '/var/log/dmesg', filedir)
-                thread_objs.append(t11)
-                t12 = do_in_thread(system_top, filedir)
-                thread_objs.append(t12)
-                t13 = do_in_thread(system_iostat, filedir)
-                thread_objs.append(t13)
-                t14 = do_in_thread(system_mpstat, filedir)
-                thread_objs.append(t14)
-                t15 = do_in_thread(system_tcpdump, filedir)
-                thread_objs.append(t15)
-                t16 = do_in_thread(system_mem_info, filedir)
-                thread_objs.append(t16)
-                t17 = do_in_thread(system_interrupts, filedir)
-                thread_objs.append(t17)
-                t18 = do_in_thread(system_ps, filedir)
-                thread_objs.append(t18)
-                t19 = do_in_thread(system_netstat, filedir)
-                thread_objs.append(t19)
-                t20 = do_in_thread(system_vmstat, filedir)
-                thread_objs.append(t20)
+                mysql_func_list = [mysql_variables, mysql_status, mysql_innodb_status, mysql_slave_status, mysql_processlist, mysql_transactions, mysql_lock_info]
+                sys_func_list = [mysql_error_log, mysql_slow_log, system_message, system_dmesg, system_top, system_iostat, system_mpstat, system_tcpdump, system_mem_info,
+                                 system_interrupts, system_ps, system_netstat, system_vmstat]
+                sys_arg_list = [slow_log, error_log, '/var/log/messages', '/var/log/dmesg', '', '', '', '', '', '', '', '', '']
+                for func in mysql_func_list:
+                    dbaction = DBAction(self.conn_setting)
+                    t = do_in_thread(func, dbaction, filedir)
+                    thread_objs.append(t)
+
+                for index, func in enumerate(sys_func_list):
+                    if sys_arg_list[index]:
+                        t = do_in_thread(func, sys_arg_list[index], filedir)
+                    else:
+                        t = do_in_thread(func, filedir)
+                    thread_objs.append(t)
+
                 for thread_obj in thread_objs:
                     thread_obj.join()
-                
+
             lock.release()
-            
+
             time.sleep(self.interval)
 
 
