@@ -146,6 +146,7 @@ def mysql_status(dbaction, filedir):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
+        status_obj = ()
     if status_obj:
         with open(filename, 'w') as f:
             for item in status_obj:
@@ -162,6 +163,7 @@ def mysql_innodb_status(dbaction, filedir):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
+        status_obj = ()
     if status_obj:
         status_list = str(status_obj[0]).split('\\n')[1:-1]
         with open(filename, 'w') as f:
@@ -179,6 +181,7 @@ def mysql_slave_status(dbaction, filedir):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
+        status_obj = ()
     desc_list = []
     if status_obj:
         with open(filename, 'w') as f:
@@ -198,6 +201,7 @@ def mysql_processlist(dbaction, filedir):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
+        processlist_obj = ()
     if processlist_obj:
         with open(filename, 'w') as f:
             for item in desc:
@@ -219,7 +223,8 @@ def mysql_transactions(dbaction, filedir):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
-    
+        trans_obj = ()
+
     if trans_obj:
         with open(filename, 'w') as f:
             for item in desc:
@@ -242,6 +247,7 @@ def mysql_lock_info(dbaction, filedir):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
+        lock_obj = ()
     if lock_obj:
         with open(filename, 'w') as f:
             for item in desc:
@@ -446,8 +452,9 @@ def get_mysql_status(dbaction):
         status_obj, desc = dbaction.data_inquiry(sql)
     except:
         error_msg = str(traceback.format_exc())
-        logging.info('连接池获取连接出错:%s' % error_msg)    
-    
+        logging.info('连接池获取连接出错:%s' % error_msg)
+        status_obj = ()
+
     if status_obj:
         for item in status_obj:
             status_dict[item[0]] = item[1]
@@ -522,7 +529,7 @@ def get_log_dir(dbaction):
     except:
         error_msg = str(traceback.format_exc())
         logging.info('连接池获取连接出错:%s' % error_msg)
-    
+
     for item in var_obj:
         if item[0] == 'slow_query_log_file':
             slow_log = item[1]
